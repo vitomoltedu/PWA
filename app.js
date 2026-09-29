@@ -4,7 +4,7 @@ document.getElementById('btn-click').addEventListener('click', () => {
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
+    navigator.serviceWorker.register('config/sw.js')
       .then(reg => console.log('Service Worker registrato con successo:', reg.scope))
       .catch(err => console.error('Registrazione Service Worker fallita:', err));
   });
